@@ -1,0 +1,45 @@
+{
+  "name": "complaint",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "time-stamp": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "details": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "employees": {
+      "type": "hasOne",
+      "model": "employee",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "customers": {
+      "type": "hasOne",
+      "model": "customer",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true,
+        "disableInclude": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
