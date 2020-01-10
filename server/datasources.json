@@ -1,6 +1,13 @@
 {
   "db": {
-    "name": "db",
-    "connector": "memory"
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "lb-practice",
+    "password": "",
+    "name": "main-ds",
+    "user": "",
+    "useNewUrlParser": true,
+    "connector": "mongodb"
   }
 }
